@@ -2,6 +2,14 @@ import asyncio
 import importlib
 import os
 import glob
+
+# ─── Python 3.14+ fix (MUST be before pyrogram import) ───
+try:
+    asyncio.get_event_loop()
+except RuntimeError:
+    asyncio.set_event_loop(asyncio.new_event_loop())
+# ─────────────────────────────────────────────────────────
+
 from pyrogram import idle
 import Config
 from VCFIGHTERS.logging import LOGGER
@@ -87,6 +95,5 @@ async def init():
 
 
 if __name__ == "__main__":
-    loop = asyncio.get_event_loop()
-    loop.run_until_complete(init())
-    
+    # Python 3.10+ compatible (works on 3.14 too)
+    asyncio.run(init())
