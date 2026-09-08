@@ -1,12 +1,11 @@
 pyrogram
 TgCrypto
-py-tgcalls
+py-tgcalls==2.3.3
 motor
 pymongo
 dnspython
 ffmpeg-python
 aiofiles
 aiohttp
-asyncio
 nest_asyncio
 python-dotenv
