@@ -77,8 +77,9 @@ async def init():
 
     # ─── AUTO MODE: Mic listener register karo ───────────────
     # Yeh ZAROOR chahiye — bina iske auto mode kaam nahi karega
-    from VCFIGHTERS.FIGHTERS.Voice import register_participant_handlers
-    await register_participant_handlers()
+    # TEMPORARILY DISABLED due to pytgcalls version incompatibility
+    # from VCFIGHTERS.FIGHTERS.Voice import register_participant_handlers
+    # await register_participant_handlers()
     # ─────────────────────────────────────────────────────────
 
     log.info("\n⚔️ VCFIGHTER IS NOW ACTIVE - Ready to Destroy VCs ⚔️\n")
